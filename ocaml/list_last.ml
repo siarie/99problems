@@ -1,11 +1,8 @@
-let last lst =
-  let rec fn acc =
-    match acc with
+let rec last lst =
+    match lst with
     | [] -> None
     | [x] -> Some x
-    | _ :: tl -> fn tl
-  in
-  fn lst
+    | _ :: tl -> last tl
 
 let () =
   let alphabets = ['a'; 'c'; 'l'; 'p'] in
